@@ -7,9 +7,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaprofesorPage implements OnInit {
 
-  constructor() { }
+  public asistencias :any[];
+
+
+  constructor() {
+    this.asistencias = [];
+   }
 
   ngOnInit() {
+    this.asistencias = [
+      {
+        group: 'Presente',
+        items: [
+          'Catalina Soto',
+          'Luisa González'
+        ]
+      },
+      {
+        group: 'Ausente',
+        items: [
+          'María Fernández',
+          'Mauricio Flores'
+        ]
+      },
+      {
+        group: 'Justificado',
+        items: [
+          'Joaquín Herrera'
+        ]
+      }
+      
+    ];
   }
 
 }
