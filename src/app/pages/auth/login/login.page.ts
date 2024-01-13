@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LoadingController, NavController } from '@ionic/angular';
 import { AuthfirebaseService } from 'src/app/services/firebase/authfirebase.service';
 
 @Component({
@@ -14,7 +16,9 @@ export class LoginPage implements OnInit {
   emailValue!: string;
   passwordValue!: string;
 
-  constructor(private formBuilder: FormBuilder,private authFire: AuthfirebaseService) { 
+
+
+  constructor(private formBuilder: FormBuilder,private authFire: AuthfirebaseService, private router: Router) { 
 
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
@@ -41,4 +45,7 @@ export class LoginPage implements OnInit {
     }
   }
 
+  async xd(){
+    this.router.navigate(['/resetpassword'])
+  }
 }
