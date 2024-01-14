@@ -8,6 +8,7 @@ import { LeerqrPageRoutingModule } from './leerqr-routing.module';
 
 import { LeerqrPage } from './leerqr.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
