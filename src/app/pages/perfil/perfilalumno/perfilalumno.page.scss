@@ -1,13 +1,57 @@
-.Icono{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ion-content {
+    --background: url(../../../../assets/Autonomia-alumno.jpg) no-repeat top center/cover fixed, #fff;
+    position: relative;
     height: 100%;
     width: 100%;
+
+
 }
-div ion-icon{
-    width: 100px;
-    height: 100px;
-    border: 5px solid rgb(255, 255, 255);
-    border-radius: 90%;
+
+
+
+.card {
+    margin: 0 auto;
+
+    .header {
+        height: 200px;
+
+        .avatar {
+            width: 160px;
+            height: 160px;
+            position: relative;
+            margin: 0 auto;
+
+            img {
+                display: block;
+                border-radius: 50%;
+                position: absolute;
+                bottom: calc(-1*(80px + 4px));
+                border: 8px solid #5931b8;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+.card-body {
+    background-color: #ffffff;
+    padding: 30px;
+    overflow: hidden;
+
+    .user {
+        padding-top: 40px;
+
+        .nombre {
+            font-size: 24px;
+            font-weight: 600;
+            color: #303940;
+        }
+
+        .correo {
+            font-size: 90%;
+            color: #949ea6;
+            text-transform: uppercase;
+            margin: 0 auto;
+        }
+    }
 }

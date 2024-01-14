@@ -46,6 +46,6 @@ export class LoginPage implements OnInit {
   }
 
   async xd(){
-    this.router.navigate(['/resetpassword'])
+    this.router.navigate(['resetpassword'])
   }
 }
