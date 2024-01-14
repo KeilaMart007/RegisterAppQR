@@ -1,0 +1,21 @@
+.background {
+    --background: #8c8c8c;
+  }
+  
+  .logo-container h1 {
+    color: yellow;
+  }
+  
+  .logo-container p {
+    color: white;
+  }
+  
+  .button-container ion-button {
+     --border-radius: center;
+     --padding-start: none;
+     --padding-end: none;
+  }
+
+ion-content{
+    margin-top: 20px;
+}  
