@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthfirebaseService } from 'src/app/services/firebase/authfirebase.service';
 
 @Component({
   selector: 'app-perfilalumno',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilalumnoPage implements OnInit {
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder,private authFire: AuthfirebaseService, private router: Router) { }
 
   ngOnInit() {
   }
 
+  
+  async logout() {
+    try {
+      await this.authFire.logout();
+    } catch (error) {
+
+    }
+  }
 }

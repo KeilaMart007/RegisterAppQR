@@ -13,7 +13,8 @@ export class ClasesalumnoPage implements OnInit {
   ngOnInit() {
   }
 
-  goToListalumno() {
-    this.router.navigate(['/listalumno']);
+  lista() {
+    this.router.navigate(['listalumno']);
   }
+
 }

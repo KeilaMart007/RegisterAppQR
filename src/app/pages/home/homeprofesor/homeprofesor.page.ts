@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homeprofesor',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeprofesorPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+  async perfil(){
+    this.router.navigate(['perfilprofesor'])
+  }
+
+  async clases(){
+    this.router.navigate(['clasesprofesor'])
   }
 
 }

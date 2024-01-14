@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoadingController, NavController } from '@ionic/angular';
 import { AuthfirebaseService } from 'src/app/services/firebase/authfirebase.service';
 
 @Component({
@@ -48,4 +47,9 @@ export class LoginPage implements OnInit {
   async xd(){
     this.router.navigate(['resetpassword'])
   }
+
+  async profe(){
+    this.router.navigate(['homeprofesor'])
+  }
+
 }

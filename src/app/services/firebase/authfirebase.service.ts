@@ -25,7 +25,7 @@ export class AuthfirebaseService {
       setTimeout(() => {
   
         this.loading.dismiss();
-        this.navCtrl.navigateRoot('perfilalumno');
+        this.navCtrl.navigateRoot('homealumno');
   
       }, 800);
     } catch (error) {
@@ -59,9 +59,27 @@ export class AuthfirebaseService {
 
 
   async logout() {
-    try {
+    try {      
       await this.auth.signOut()
       console.log("sesion finalizada")
+      this.loadingCtrl.create({
+        message: 'Saliendo'
+      }).then((overlay) => {
+        this.loading = overlay;
+        this.loading.present();
+      })
+  
+      setTimeout(() => {
+  
+        this.loading.dismiss();
+        this.navCtrl.navigateRoot('login');
+  
+      }, 800);
+
+
+
+
+
     } catch (error) {
       console.error("error al finalizar sesion")
     }

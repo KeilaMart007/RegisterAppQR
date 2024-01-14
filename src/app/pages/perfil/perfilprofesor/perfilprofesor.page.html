@@ -1,11 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="warning">
 
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/homeprofesor"></ion-back-button>
-    </ion-buttons>
-
     <ion-title>Perfil</ion-title>
+
+    <ion-buttons slot="end" (click)="logout()">
+      <ion-icon name="exit"></ion-icon>
+    </ion-buttons>
 
   </ion-toolbar>
 </ion-header>

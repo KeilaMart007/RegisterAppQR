@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthfirebaseService } from 'src/app/services/firebase/authfirebase.service';
 
 @Component({
   selector: 'app-perfilprofesor',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilprofesorPage implements OnInit {
 
-  constructor() { }
+  constructor(private authFire: AuthfirebaseService) { }
 
   ngOnInit() {
+  }
+  
+  async logout() {
+    try {
+      await this.authFire.logout();
+    } catch (error) {
+
+    }
   }
 
 }

@@ -1,12 +1,18 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="warning">
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/homealumno"></ion-back-button>
+    </ion-buttons>
+
     <ion-title>Clases</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
-  <ion-list [inset]="true">
+  <ion-list [inset]="true" (click)="lista()">
     <ion-item [button]="true" detail="false">
       <div class="unread-indicator-wrapper" slot="start">
         <div class="unread-indicator"></div>
@@ -24,7 +30,7 @@
       </div>
     </ion-item>
 
-    <ion-item button (click)="goToListalumno">
+    <ion-item button (click)="lista()">
       <div class="unread-indicator-wrapper" slot="start"></div>
       <ion-label>
         <strong>Programacion de Base de Datos 004E</strong>
@@ -37,7 +43,7 @@
       </div>
     </ion-item>
 
-    <ion-item [button]="true" detail (click)="goToListalumno">
+    <ion-item [button]="true" detail (click)="lista()">
       <div class="unread-indicator-wrapper" slot="start">
         <div class="unread-indicator"></div>
       </div>
@@ -54,7 +60,7 @@
       </div>
     </ion-item>
 
-    <ion-item [button]="true" detail>
+    <ion-item [button]="true" detail (click)="lista()">
       <div class="unread-indicator-wrapper" slot="start"></div>
       <ion-label>
         <strong>Programacion de Aplicaciones Moviles 002D</strong>

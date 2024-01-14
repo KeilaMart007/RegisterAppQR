@@ -1,32 +1,30 @@
 <ion-header>
   <ion-toolbar color="warning">
-    <ion-buttons slot="start">
-      <ion-icon name="settings"></ion-icon>
-    </ion-buttons>
-    <ion-title>"Nombre Alumno"</ion-title>
-    <ion-buttons slot="end">
+    <ion-title>Inicio Alumno</ion-title>
+    <ion-buttons slot="end" (click)="perfil()">
       <ion-icon name="person"></ion-icon>
+
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="background">
   <div class="button-container">
-    <ion-button expand="full" color="light">Clases</ion-button>
+    <ion-button expand="full" color="light" (click)="clases()">Clases</ion-button>
     <ion-thumbnail slot="start">
       <img alt="Silhouette of mountains" src="../../../../assets/icon/clases.png" />
     </ion-thumbnail>
     <br/>
     <br/>
     <br/>
-    <ion-button expand="full" color="light">Horario</ion-button>
+    <ion-button expand="full" color="light" (click)="horario()">Horario</ion-button>
     <ion-thumbnail slot="start">
       <img alt="Silhouette of mountains" src="../../../../assets/icon/horario.png" />
     </ion-thumbnail>
     <br/>
     <br/>
     <br/>
-    <ion-button expand="full" color="light">Lector QR</ion-button>
+    <ion-button expand="full" color="light" (click)="qr()">Lector QR</ion-button>
     <ion-thumbnail slot="start">
       <img alt="Silhouette of mountains" src="../../../../assets/icon/lector-qr.png" />
     </ion-thumbnail>
